@@ -87,6 +87,7 @@ int main(int argc, char* argv[])
     bool loop_mode_flag=false;
     bool useStdin;
     int Harmonic=1;
+        dbg_setlevel(0);
 	while(1)
 	{
 		a = getopt(argc, argv, "i:f:m:s:p:hld:w:c:ra:");
