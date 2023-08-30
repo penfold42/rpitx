@@ -55,8 +55,7 @@ terminate(int num)
 
 int main(int argc, char* argv[])
 {
-	
-	if(argc<3) {printf("Usage : pichirp Frequency(Hz) Bandwidth(Hz) Time(Seconds)\n");exit(0);}
+	if(argc<4) {printf("Usage : pichirp Frequency(Hz) Bandwidth(Hz) Time(Seconds)\n");exit(0);}
 	
 	float Frequency=atof(argv[1]);
 	float Bandwidth=atof(argv[2]);
@@ -98,7 +97,7 @@ int main(int argc, char* argv[])
 			}
 			
 		}
-		fprintf(stderr,"Freq=%f\n",Bandwidth*0.5*sin(2*3.1415*(float)count/(float)NbStepWithSR));
+//		fprintf(stderr,"Freq=%f\n",Bandwidth*0.5*sin(2*3.1415*(float)count/(float)NbStepWithSR));
 		
 	}
 	fprintf(stderr,"End\n");
