@@ -257,7 +257,7 @@ int main(int argc, char* argv[])
                         }
                         else 
                         {
-                            printf("End of file\n");
+                            fprintf(stderr,"End of file\n");
                             if(loop_mode_flag&&!useStdin)
                             fseek ( FileInHandle , 0 , SEEK_SET );
                             else
@@ -285,7 +285,7 @@ int main(int argc, char* argv[])
                         }
                         else 
                         {
-                            printf("End of file\n");
+                            fprintf(stderr,"End of file\n");
                             if(loop_mode_flag&&useStdin)
                             fseek ( FileInHandle , 0 , SEEK_SET );
                             else
@@ -323,7 +323,7 @@ int main(int argc, char* argv[])
                         }
                         else 
                         {
-                            printf("End of file\n");
+                            fprintf(stderr,"End of file\n");
                             if(loop_mode_flag&&useStdin)
                             fseek ( FileInHandle , 0 , SEEK_SET );
                             else
