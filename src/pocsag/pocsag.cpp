@@ -633,7 +633,11 @@ int main(int argc, char *argv[]) {
             break;
         }
     }
-    dbg_setlevel(1);
+    if (debug) {
+	    dbg_setlevel(1);
+    } else {
+	    dbg_setlevel(0);
+    }
     char line[65536];
     char *endptr;
     srand(time(NULL));
@@ -691,7 +695,9 @@ int main(int argc, char *argv[]) {
 
             encodeTransmission(msgIndex, address, SetFunctionBits, message, transmission);
             size_t beforeLength = completeLength + 0;
-            fprintf(stderr, "DEBUG DATA = I=%d   P=%p T=%d L=%d\n", msgIndex, completeTransmission, completeLength, messageLength);
+	    if (debug) {
+		    fprintf(stderr, "DEBUG DATA = I=%d   P=%p T=%d L=%d\n", msgIndex, completeTransmission, completeLength, messageLength);
+	    }
             completeLength += messageLength;
             completeTransmission = (uint32_t *)realloc(completeTransmission, sizeof(uint32_t) * completeLength);
             for (size_t byteI = 0; byteI < messageLength; byteI++) {

@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
 	int a;
 	int anyargs = 0;
 	float SetFrequency=434e6;
-	dbg_setlevel(1);
+	dbg_setlevel(0);
 	bool NotKill=false;
 	float ppm=1000.0;
 	while(1)
